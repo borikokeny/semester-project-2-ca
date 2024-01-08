@@ -1,0 +1,19 @@
+{
+  "name": "semester-project-2-ca",
+  "version": "0.0.1",
+  "description": "Semester Project 2 - Noroff",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borikokeny/semester-project-2-test.git"
+  },
+  "author": "Bori Kokeny <bori@minerali.hu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borikokeny/semester-project-2-test/issues"
+  },
+  "homepage": "https://github.com/borikokeny/semester-project-2-test#readme"
+}
