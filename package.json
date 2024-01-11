@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css"
+    "watch": "sass --watch src/scss:dist/css",
+    "dev": "npm run watch & live-server"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/borikokeny/semester-project-2-test#readme",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.69.7"
   },
   "dependencies": {
