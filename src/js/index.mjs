@@ -1,14 +1,34 @@
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
-import * as listing from "./api/listing/index.mjs";
+import * as listeners from "./handlers/index.mjs";
+import * as templates from "./templates/index.mjs";
+import * as listingMethods from "./api/listing/index.mjs";
+
 
 const path = location.pathname;
 
 if (path === '/profile/login/') {
-  setLoginFormListener()
+  listeners.setLoginFormListener()
 } else if (path === '/profile/register/') {
-  setRegisterFormListener()
+  listeners.setRegisterFormListener()
+} else if (path === '/listing/create/') {
+  listeners.setCreateListingFormListener()
+} else if (path === '/listing/edit/') {
+  listeners.setUpdateListingFormListener()
 }
+
+// async function testTemplate() {
+//   const listings = await listingMethods.viewListings();
+//   const container = document.querySelector("#listings");
+//   templates.renderListingTemplates(listings, container);
+// }
+
+// testTemplate()
+
+
+
+
+
+
+
 
 // listing.createListing()
 // listing.updateListing()
@@ -24,31 +44,3 @@ if (path === '/profile/login/') {
 // removeListing("4a9f3045-2941-4299-97a4-aa0207d912f5")
 
 
-// {id: "4a9f3045-2941-4299-97a4-aa0207d912f5", title: "Example Post 2", description: "Blala", media: [],…}
-// created
-// : 
-// "2024-01-11T14:00:50.317Z"
-// description
-// : 
-// "Blala"
-// endsAt
-// : 
-// "2024-01-18T12:40:55.637Z"
-// id
-// : 
-// "4a9f3045-2941-4299-97a4-aa0207d912f5"
-// media
-// : 
-// []
-// tags
-// : 
-// []
-// title
-// : 
-// "Example Post 2"
-// updated
-// : 
-// "2024-01-11T14:00:50.317Z"
-// _count
-// : 
-// {bids: 0}
