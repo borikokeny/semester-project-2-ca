@@ -1,14 +1,14 @@
 import { createListing, updateListing } from "../api/listing/index.mjs";
 
 export async function setUpdateListingFormListener() {
-  const form = document.querySelector("#updateListing");
+  const form = document.querySelector("#listing");
 
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
   
   if (form) {
     const button = form.querySelector("button");
-    button.disabled = true;
+    // button.disabled = true;
 
     const listing = await createListing(id);
 
@@ -17,7 +17,7 @@ export async function setUpdateListingFormListener() {
     form.endsAt.value = listing.endsAt;
     form.media.value = listing.media;
 
-    button.disabled = false;
+    // button.disabled = false;
 
     form.addEventListener("submit", (event) => {
       event.preventDefault()

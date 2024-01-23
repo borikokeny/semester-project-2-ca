@@ -12,11 +12,16 @@ export async function renderListingPage() {
   const listingDescription = document.querySelector("#listingDescription");
   const listingEndsAt = document.querySelector("#listingEndsAt");
 
-  document.title = listing.title;
-  listingImage.src = listing.media[0] ?? `/images/placeholder.png`;
+  // document.title = listing.title;
+  // listingImage.src = listing.media[0] ?? `/images/placeholder.png`;
   listingTitle.innerHTML = listing.title;
   listingDescription.innerHTML = listing.description;
 }
+
+
+
+
+
 
 // import { viewListing } from "../api/listing/view.mjs";
 
