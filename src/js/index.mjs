@@ -14,13 +14,13 @@ if (path === '/profile/login/') {
   listeners.setUpdateListingFormListener()
 }
 
-// async function testTemplate() {
-//   const listings = await listingMethods.viewListings();
-//   const container = document.querySelector("#listings");
-//   templates.renderListingTemplates(listings, container);
+async function testTemplateA() {
+  const listings = await listingMethods.viewListings();
+  const container = document.querySelector("#listings");
+  templates.renderListingTemplates(listings, container);
 
-//   //ez a kod jeleniti meg a listing/index.html-en a listingeket
-// }
+  //ez a kod jeleniti meg a listing/index.html-en a listingeket
+}
 
 // async function testTemplate() {
 //   const listings = await listingMethods.viewListings();
@@ -31,7 +31,7 @@ if (path === '/profile/login/') {
 //    //ez a kod rakja fel az utolso listinget az oldalra
 // }
 
-async function testTemplate() {
+async function testTemplateB() {
   const listings = await listingMethods.viewListings();
   const listing = listings[25];
   const container = document.querySelector("#listing");
@@ -40,7 +40,8 @@ async function testTemplate() {
    //ez a kod rakja fel a kiszemelt sorszamu listinget az oldalra
 }
 
-testTemplate()
+testTemplateA()
+testTemplateB()
 
 
 
