@@ -22,23 +22,23 @@ if (path === '/profile/login/') {
 //   //ez a kod jeleniti meg a listing/index.html-en a listingeket
 // }
 
+// async function testTemplate() {
+//   const listings = await listingMethods.viewListings();
+//   const listing = listings.pop()
+//   const container = document.querySelector("#listing");
+//   templates.renderListingTemplate(listing, container);
+
+//    //ez a kod rakja fel az utolso listinget az oldalra
+// }
+
 async function testTemplate() {
   const listings = await listingMethods.viewListings();
-  const listing = listings.pop()
+  const listing = listings[25];
   const container = document.querySelector("#listing");
   templates.renderListingTemplate(listing, container);
 
-   //ez a kod rakja fel az utolso listinget az oldalra
-}
-
-// async function testTemplate() {
-//   const listings = await listingMethods.viewListings();
-//   const listing = listings[4];
-//   const container = document.querySelector("#listing");
-//   renderListingTemplate(listing, container);
-
    //ez a kod rakja fel a kiszemelt sorszamu listinget az oldalra
-// }
+}
 
 testTemplate()
 
