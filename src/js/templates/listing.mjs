@@ -1,5 +1,5 @@
 export function listingTemplateA(postData) {
-  return `<div class="listing" id=${postData.id}>${postData.title}</div>`
+  return `<div class="listing card" id=${postData.id}>${postData.title}</div>`
 }
 
 export function listingTemplateB(postData) {
@@ -7,13 +7,24 @@ export function listingTemplateB(postData) {
   listing.classList.add("listing");
   listing.innerText = postData.title;
   
+  if(postData.description) {
+    const description = document.createElement('p');
+    description.innerText = postData.description;
+    listing.append(description)
+  }
 
-  // if(postData.media) {
-  //   const img = document.createElement('img');
-  //   img.src = postData.media;
-  //   img.alt = postData.title;
-  //   listing.append(img)
-  // }
+  if(postData.endsAt) {
+    const endsAt = document.createElement('p');
+    endsAt.innerText = postData.endsAt;
+    listing.append(endsAt)
+  }
+
+  if(postData.media) {
+    const img = document.createElement('img');
+    img.src = postData.media;
+    img.alt = postData.title;
+    listing.append(img)
+  }
   return listing;
 }
 
