@@ -14,22 +14,22 @@ if (path === '/profile/login/') {
   listeners.setUpdateListingFormListener()
 }
 
-async function testTemplate() {
-  const listings = await listingMethods.viewListings();
-  const container = document.querySelector("#listing");
-  templates.renderListingTemplates(listings, container);
-
-  //ez a kod jeleniti meg a listing/index.html-en a listingeket
-}
-
 // async function testTemplate() {
 //   const listings = await listingMethods.viewListings();
-//   const listing = listings.pop()
-//   const container = document.querySelector("#listing");
-//   renderListingTemplate(listing, container);
+//   const container = document.querySelector("#listings");
+//   templates.renderListingTemplates(listings, container);
+
+//   //ez a kod jeleniti meg a listing/index.html-en a listingeket
+// }
+
+async function testTemplate() {
+  const listings = await listingMethods.viewListings();
+  const listing = listings.pop()
+  const container = document.querySelector("#listing");
+  templates.renderListingTemplate(listing, container);
 
    //ez a kod rakja fel az utolso listinget az oldalra
-// }
+}
 
 // async function testTemplate() {
 //   const listings = await listingMethods.viewListings();
