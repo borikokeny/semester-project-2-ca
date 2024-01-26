@@ -14,8 +14,11 @@
       <div class="container-fluid">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">BIDWHIZ
-              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            <a href="../../index.html" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+              <img src="../../images/Pink-logo.jpg" alt="BIDWHIZ logo" class="bi me-2" role="img">
+
+              <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg> -->
+
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -49,7 +52,59 @@
       </div>
     </nav>
   </header>
-  <form id="loginForm">
+
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">BIDWHIZ logocska</h1>
+        <div class="col-lg-12 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="../../images/Canon_eos.jpg" alt="Canon camera" width="720">
+      </div>
+        <p class="col-lg-10 fs-4">SOLUTION for AUCTION
+        </p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" id="loginForm">
+          <h3>Sign In</h3>
+          <p>Sign in, so you can earn 1000 credits and add BIDS to any of the listings!</p>
+
+          <!-- <div class="form-floating mb-3">
+            <input type="name" class="form-control" id="floatingInput" placeholder="name" name="name" required pattern="^[\w]+$" title="Username can only contain upper and lower case letters, numbers and underscore. Example: myUser_123">
+            <label for="floatingInput">Name</label>
+          </div> -->
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed" >
+            <label for="floatingInput">Email address</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="password" required minlength="8">
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <!-- <div class="form-floating mb-3">
+            <input type="url" class="form-control" id="floatingAvatar" placeholder="Avatar" name="avatar">
+            <label for="floatingAvatar">Avatar</label>
+          </div> -->
+
+          <!-- <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div> -->
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+          <hr class="my-4">
+          <h4>Sign Up</h4>
+          <p>Welcome to BIDWHIZ! It is quick and easy to set up an account.</p>
+          <a href="../register/index.html">Create an Account</a>
+          <!-- <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small> -->
+        </form>
+        
+      </div>
+
+
+  <!-- <form id="loginForm">
     <div class="form-group mb-3">
       <label for="">Email</label>
       <input class="form-control" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed">
@@ -61,8 +116,9 @@
     </div>
 
     <button class="btn btn-success">Login</button>
-  </form>
+  </form> -->
   <div class="container">
+
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">BIDWHIZ
