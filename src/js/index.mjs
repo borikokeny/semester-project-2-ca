@@ -12,6 +12,8 @@ if (path === '/profile/login/') {
   listeners.setCreateListingFormListener()
 } else if (path === '/listing/edit/') {
   listeners.setUpdateListingFormListener()
+} else if (path === '/listing/tryListing/') {
+  templates.renderSingleListingPage()
 }
 
 async function testTemplateA() {
@@ -19,7 +21,7 @@ async function testTemplateA() {
   const container = document.querySelector("#listings");
   templates.renderListingTemplates(listings, container);
 
-  //ez a kod jeleniti meg a listing/index.html-en a listingeket
+  //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }
 
 // async function testTemplate() {

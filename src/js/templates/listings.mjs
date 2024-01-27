@@ -39,5 +39,5 @@ export function listingTemplateB(postData) {
 
 export function renderListingTemplates(postDataList, parent) {
   parent.append(...postDataList.map(listingTemplateB))
-  //ez a kod rakja ki a listing/index.html oldalra a listingeket
+  //ez a kod rakja ki a listings/index.html oldalra a listingeket
 }
