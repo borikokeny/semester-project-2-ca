@@ -1,20 +1,23 @@
+import "./router.mjs";
 import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
 
-const path = location.pathname;
+// const path = location.pathname;
 
-if (path === '/profile/login/') {
-  listeners.setLoginFormListener()
-} else if (path === '/profile/register/') {
-  listeners.setRegisterFormListener()
-} else if (path === '/listing/create/') {
-  listeners.setCreateListingFormListener()
-} else if (path === '/listing/edit/') {
-  listeners.setUpdateListingFormListener()
-} else if (path === '/listing/tryListing/') {
-  templates.renderSingleListingPage()
-}
+// if (path === '/profile/login/') {
+//   listeners.setLoginFormListener()
+// } else if (path === '/profile/register/') {
+//   listeners.setRegisterFormListener()
+// } else if (path === '/') {
+//   listeners.setLogoutFormListener()
+// } else if (path === '/listing/create/') {
+//   listeners.setCreateListingFormListener()
+// } else if (path === '/listing/edit/') {
+//   listeners.setUpdateListingFormListener()
+// } else if (path === '/listing/tryListing/') {
+//   templates.renderSingleListingPage()
+// }
 
 async function testTemplateA() {
   const listings = await listingMethods.viewListings();
