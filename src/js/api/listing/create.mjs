@@ -9,7 +9,12 @@ export async function createListing(postData) {
 
   const response = await authFetch(createListingURL, {
     method,
-    body: JSON.stringify(postData)
+    body: JSON.stringify({
+      title: postData.title,
+      description: postData.description,
+      media: postData.media.split(","),
+      endsAt: postData.endsAt
+    }),
   })
 
   return await response.json()
