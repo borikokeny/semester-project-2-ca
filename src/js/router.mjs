@@ -14,7 +14,7 @@ switch (path) {
   case '/':
     listeners.setLogoutFormListener()
     break;  
-  case '/listing/create/':
+  case '/profile/':
     listeners.setCreateListingFormListener()
     break;
   case '/listing/edit/':
