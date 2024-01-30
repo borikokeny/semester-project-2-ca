@@ -14,6 +14,9 @@ switch (path) {
   case '/':
     listeners.setLogoutFormListener()
     break;  
+  case '/listings/':
+  
+    break;
   case '/profile/':
     listeners.setCreateListingFormListener()
     break;
@@ -22,6 +25,9 @@ switch (path) {
     break;
   case '/listing/tryListing/':
     listeners.renderSingleListingPage()
+    break;
+  case '/listing/':
+    templates.renderListingTemplateNEW()
     break;
 }
 
