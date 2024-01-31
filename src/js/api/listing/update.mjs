@@ -8,7 +8,7 @@ export async function updateListing(postData) {
   if (!postData.id) {
     throw new Error("Update needs a post ID")
   }
-const updateListingURL = `${API_AUCTION_URL}${action}/${postData.id}`;
+  const updateListingURL = `${API_AUCTION_URL}${action}/${postData.id}`;
 
   const response = await authFetch(updateListingURL, {
     method,
