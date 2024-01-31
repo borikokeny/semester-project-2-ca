@@ -40,7 +40,8 @@ export function listingTemplateB(postData) {
   const listing = document.createElement("div");
 
   
-  listing.classList.add("listing", "col"),
+  listing.classList.add("listing", "col", "card", "shadow-sm");
+  listing.style.width = '50%'
 
   
   listing.innerText = postData.title;
@@ -51,8 +52,14 @@ export function listingTemplateB(postData) {
 
   if(postData.media) {
     const img = document.createElement('img');
+    const listingImage = document.querySelector('card-img-container')
+    img.classList.add('img', 'bd-placeholder-img', 'card-img-top');
+    img.style.width = '100%';
+    img.style.objectFit = 'cover';
+    // listingImage.append(img);
     img.src = postData.media;
     img.alt = postData.title;
+
     listing.append(img)
   }
 
