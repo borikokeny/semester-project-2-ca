@@ -40,7 +40,7 @@ export function listingTemplateB(postData) {
     // listing.append(img)
 
     const img = document.createElement('img');
-    const listingImage = document.querySelector('.card-img-top');
+    const listingImage = document.querySelector('.card-img-container');
     img.classList.add('img');
     img.style.width = '100%'
     img.style.objectFit = "cover";
