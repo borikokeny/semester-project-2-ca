@@ -8,9 +8,11 @@ export async function renderProfile() {
   // const profileName = document.querySelector("#profileName");
   // const profileEmail = document.querySelector("#profileEmail");
   const profileImage = document.querySelector("#profileImage");
+  const credit = document.querySelector("#credit");
 
   // profileName.innerText = profile.name;
   // profileEmail.innerText = profile.email;
+  credit.innerText = profile.credits;
 
   if (profile.avatar) {
     profileImage.src = profile.avatar;
