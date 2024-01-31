@@ -4,7 +4,7 @@ export function listingTemplateA(postData) {
 
 export function listingTemplateB(postData) {
 
-  const cardText = document.createElement('p');
+  const cardText = document.createElement('h5');
   const listingTitle = document.querySelector('.card-text');
   cardText.classList.add('listing');
   cardText.innerText = postData.title;
@@ -31,6 +31,8 @@ export function listingTemplateB(postData) {
     const img = document.createElement('img');
     const listingImage = document.querySelector('.card-img-top');
     img.classList.add('img');
+    img.style.width = '100%'
+    img.style.objectFit = "cover";
     listingImage.append(img)
     img.src = postData.media;
     img.alt = postData.title;

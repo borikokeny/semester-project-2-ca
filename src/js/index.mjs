@@ -20,10 +20,22 @@ import * as listingMethods from "./api/listing/index.mjs";
 // }
 
 async function testTemplateA() {
-  const listings = await listingMethods.viewListings();
   const container = document.querySelector("#listings");
-  templates.renderListingTemplates(listings, container);
 
+  const renderListings = async (listings) => {
+    try {
+      templates.renderListingTemplates(listings, container);
+    } catch (error) {
+      return (error, container)
+    }
+  };
+
+  try {
+    const listings = await listingMethods.viewListings();
+    renderListings(listings);
+  } catch (error) {
+    return (error)
+  }
   //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }
 
@@ -38,7 +50,7 @@ async function testTemplateA() {
 
 async function testTemplateB() {
   const listings = await listingMethods.viewListings();
-  const listing = listings[25];
+  const listing = listings[46];
   const container = document.querySelector("#listing");
   templates.renderListingTemplate(listing, container);
 
