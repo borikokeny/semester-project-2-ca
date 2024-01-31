@@ -25,6 +25,8 @@ async function testTemplateA() {
   container.classList.add('album', 'py-5', 'bg-body-tertiary', 'container')
   templates.renderListingTemplates(listings, container);
 
+  
+
   //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }
 

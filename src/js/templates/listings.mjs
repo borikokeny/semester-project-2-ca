@@ -38,13 +38,12 @@ export function listingTemplateA(postData) {
 
 export function listingTemplateB(postData) {
   const listing = document.createElement("div");
+  listing.classList.add("listing", "col", "card", "shadow-sm", "mb-5");
+  listing.style.width = '50%';
 
-  
-  listing.classList.add("listing", "col", "card", "shadow-sm");
-  listing.style.width = '50%'
 
-  
-  listing.innerText = postData.title;
+  // listing.innerText = postData.title;
+
   // const listing = document.createElement("div");
   // listing.classList.add("listing");
   // listing.innerText = postData.title;
@@ -52,8 +51,8 @@ export function listingTemplateB(postData) {
 
   if(postData.media) {
     const img = document.createElement('img');
-    const listingImage = document.querySelector('card-img-container')
-    img.classList.add('img', 'bd-placeholder-img', 'card-img-top');
+    // const listingImage = document.querySelector('card-img-container');
+    img.classList.add('img', 'bd-placeholder-img', 'card-img-top', 'mb-4');
     img.style.width = '100%';
     img.style.objectFit = 'cover';
     // listingImage.append(img);
@@ -63,6 +62,14 @@ export function listingTemplateB(postData) {
     listing.append(img)
   }
 
+  if(postData.title) {
+    const title = document.createElement('h5');
+    title.classList.add('card-text');
+    title.innerText = postData.title;
+    listing.append(title);
+  }
+  
+  
   if(postData.description) {
     const description = document.createElement('p');
     description.innerText = postData.description;
@@ -72,8 +79,14 @@ export function listingTemplateB(postData) {
   if(postData.endsAt) {
     const endsAt = document.createElement('p');
     endsAt.innerText = postData.endsAt;
+    endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
     listing.append(endsAt)
   }
+
+  const button = document.createElement('button');
+  button.classList.add('btn', 'btn-primary');
+  button.innerText = "BID";
+  listing.append(button)
 
   return listing;
 }
