@@ -15,6 +15,7 @@ switch (path) {
     listeners.setLogoutFormListener()
     break;  
   case '/profile/':
+    templates.renderProfile()
     listeners.setUpdateProfileListener()
     listeners.setCreateListingFormListener()
     break;
