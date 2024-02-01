@@ -24,6 +24,7 @@ export function listingTemplateB(postData) {
     const listingEndsAt = document.querySelector('.card-text');
     endsAt.classList.add('endsAt')
     endsAt.innerText = postData.endsAt;
+    endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
     listingEndsAt.append(endsAt)
   }
 
@@ -36,8 +37,17 @@ export function listingTemplateB(postData) {
     listingImage.append(img)
     img.src = postData.media;
     img.alt = postData.title;
-    // listing.append(img)
+    listingImage.append(img);
+
   }
+
+  const bid = document.createElement('p');
+  const bidCounter = document.querySelector('.bid-counter');
+  bid.classList.add = ('mb-3');
+  bidCounter.innerText = postData._count.bids;
+  bidCounter.textContent = `Current BID: ${bidCounter.innerText}`;
+  bidCounter.append(bid);
+
   return listing;
 }
 
