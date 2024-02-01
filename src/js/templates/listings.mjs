@@ -76,12 +76,16 @@ export function listingTemplateB(postData) {
     listing.append(description)
   }
 
-  if(postData.endsAt) {
     const endsAt = document.createElement('p');
     endsAt.innerText = postData.endsAt;
     endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
     listing.append(endsAt)
-  }
+  
+    const bid = document.createElement('p');
+    bid.innerText = postData._count.bids;
+    bid.textContent = `Current BID: ${bid.innerText}`;
+    listing.append(bid)
+ 
 
   const button = document.createElement('button');
   button.classList.add('btn', 'btn-primary', 'mb-3');
