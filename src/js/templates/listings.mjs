@@ -84,7 +84,7 @@ export function listingTemplateB(postData) {
   }
 
   const button = document.createElement('button');
-  button.classList.add('btn', 'btn-primary');
+  button.classList.add('btn', 'btn-primary', 'mb-3');
   button.innerText = "BID";
   listing.append(button)
 

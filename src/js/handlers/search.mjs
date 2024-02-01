@@ -1,61 +1,71 @@
+// import { viewListings } from "../api/listing/view.mjs";
+
+// export async function search() {
+//   const listings = await viewListings();
+//   const searchForm = document.querySelector("#searchForm");
+//   const searchInput = document.querySelector("input[type=search]");
+
+//   if (searchForm) {
+//     searchForm.addEventListener("submit", (e) => {
+     
+//       e.preventDefault();
+//       const searchValue = searchInput.value.trim();
+
+//       if (searchValue === "") {
+//         searchResults([]);
+//         return;
+//       }
+
+//       const filteredListings = listings.filter((listing) => {
+//         const title = listing.title.toLowerCase();
+//         const description = listing.description.toLowerCase();
+
+//         return title.includes(searchValue) || description.includes(searchValue);
+//       });
+
+//       searchResults(filteredListings);
+//     });
+//   }
+// }
+
+// function searchResults(filteredListings) {
+//   const filterContainer = document.querySelector('#search-result'); 
+//   filterContainer.innerHTML = "";
+// }
+
+
+
+
+
+
+import { listingTemplateA } from "../templates/listings.mjs";
 import { viewListings } from "../api/listing/view.mjs";
 
-export async function search() {
+export async function searchListings() {
   const listings = await viewListings();
-  const searchForm = document.querySelector("#searchForm");
-  const searchInput = document.querySelector("input[type=search]");
 
-  if (searchForm) {
-    searchForm.addEventListener("submit", (e) => {
-     
-      e.preventDefault();
-      const searchValue = searchInput.value.trim();
+  // const searchForm = document.querySelector("#searchForm");
+  const searchInput = document.querySelector("#search");
 
-      if (searchValue === "") {
-        searchResults([]);
-        return;
-      }
+ 
+    search.onkeyup = function (event) {
+    
+      console.log(event);
 
-      const filteredListings = listings.filter((listing) => {
-        const title = listing.title.toLowerCase();
-        const description = listing.description.toLowerCase();
+      const searchValue = event.target.value.trim().toLowerCase();
 
-        return title.includes(searchValue) || description.includes(searchValue);
+      const filterListings = listings.filter(function (postData) {
+        if (postData.title.toLowerCase().startsWith(searchValue)) {
+          return true;
+        }
       });
 
-      searchResults(filteredListings);
-    });
-  }
-}
-
-function searchResults(filteredListings) {
-  const filterContainer = document.querySelector('#search-result'); 
-  filterContainer.innerHTML = "";
+      listingTemplateA(filterListings);
+  };  
 }
 
 
 
-
-
-
-// import { listingTemplateB } from "../templates/listings.mjs";
-
-// export function searchListings() {
-//   const search = document.querySelector("#search");
-
-//   search.onkeyup = function(event) {
-//     console.log(event);
-  
-//     const searchValue = event.target.value.trim().toLowerCase();
-  
-//     const filterListings = listings.filter(function (postData) {
-//       if (postData.title.toLowerCase().startsWith(searchValue)) {
-//         return true;
-//       }
-//     });
-//     listingTemplateB(filterListings);
-// };
-// }
 
 
 

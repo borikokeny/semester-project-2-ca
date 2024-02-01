@@ -16,7 +16,8 @@ switch (path) {
     // listeners.renderBySearch()
     break;  
   case '/listings/':
-    listeners.search()
+    // listeners.search()
+    listeners.searchListings()
     break;
   case '/profile/':
     listeners.setCreateListingFormListener()
