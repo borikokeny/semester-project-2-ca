@@ -13,12 +13,14 @@ switch (path) {
     break;  
   case '/':
     listeners.setLogoutFormListener()
+    // listeners.renderBySearch()
     break;  
   case '/listings/':
-  
+    listeners.search()
     break;
   case '/profile/':
     listeners.setCreateListingFormListener()
+    // listeners.renderBySearch()
     break;
   case '/listing/edit/':
     listeners.setUpdateListingFormListener()
@@ -27,7 +29,8 @@ switch (path) {
     listeners.renderSingleListingPage()
     break;
   case '/listing/':
-    templates.renderListingTemplateNEW()
+    // templates.renderListingTemplateNEW()
+    listeners.renderBySearch()
     break;
 }
 
