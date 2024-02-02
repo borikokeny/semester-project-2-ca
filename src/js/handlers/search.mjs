@@ -1,5 +1,5 @@
 import { viewListings } from "../api/listing/view.mjs";
-import { listingTemplateB } from "../templates/listings.mjs";
+import { renderListingTemplates } from "../templates/listings.mjs";
 
 export async function search() {
   const listingsToFilter = await viewListings();
@@ -39,7 +39,7 @@ function searchResults(listingsFiltered) {
   if (listingsFiltered.length === 0) {
     return error;
   } else {
-    listingTemplateB(listingsFiltered, searchContainer);
+    renderListingTemplates(listingsFiltered, searchContainer);
   }
 }
 
