@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listing</title>
+  <link rel="stylesheet" href="/dist/css/index.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="/src/js/index.mjs" defer></script>
+</head>
+<body>
+  <header class="p-3 mb-3 border-bottom">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../../images/Pink-logo.jpg" alt="BIDWHIZ logo" class="bi me-2" role="img" width="192" height="115">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 link-secondary">HOME</a></li>
+              <li><a href="../listings/" class="nav-link px-2 link-body-emphasis">Listings</a></li>
+              <li><a href="../listing/" class="nav-link px-2 link-body-emphasis">Create a Listing</a></li>
+              <!-- <li><a href="#" class="nav-link px-2 link-body-emphasis">Create an Account</a></li> -->
+            </ul>
+            </div>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" style="">
+                <li><a class="dropdown-item" href="../profile/register/">Create an Account</a></li>
+                <li><a class="dropdown-item" href="../profile/login/">Sign In</a></li>
+                <li><a class="dropdown-item" href="../profile/">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item sign-out" href="/">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <div id="listing">
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+      
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm" id="card">
+              <img id="listingImageContainer"/>
+
+              <div class="col">
+                <h1 id="listingTitle"></h1>
+                <h2 id="listingDescription"></h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text"></p>
+                <div class="bid-counter"></div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <form >
+                    <label>Add your BID</label>
+                    <input placeholder="amount">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    </div>
+                  </form>
+                </div>
+                <div>
+                  <hr class="my-4">
+                  <h5 class="history">Bidding history</h5>
+                  <p>Name Amount Date</p>
+                  <p>Jack 100000 12.03.24</p>
+                  <p>Mary 2000 03.02.01</p>
+                </div>
+                <div>
+                  <hr class="my-4">
+                  <h5 class="lister">Lister</h5>
+                  <p>James Joyce</p>
+                  <p>jj@noroff.stud.no</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+
+
+  </div>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 BIDWHIZ, Inc</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listing</title>
+  <link rel="stylesheet" href="/dist/css/index.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="/src/js/index.mjs" defer></script>
+</head>
+<body>
+  <div class="mx-5 m-md-5">
+    <h1 class="fs-4" id="listingTitle">Title</h1>
+    <p class="fw-regular mb-5" id="listingDescription"></p>
+    <div class="fs-7 text-muted text-uppercase">
+      Time left:
+      <p
+        class="text-primary fw-semibold fs-6 text-lowercase"
+        id="listingEndsAt"
+      ></p>
+    </div>
+</body>
+</html> -->

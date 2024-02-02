@@ -17,7 +17,7 @@ export async function viewListing(id) {
   }
   const viewListingURL = `${API_AUCTION_URL}${action}/${id}`;
   
-    const response = await authFetch(viewListingURL)
+    const response = await authFetch(viewListingURL);
   
-    return await response.json()
+    return await response.json();
   }

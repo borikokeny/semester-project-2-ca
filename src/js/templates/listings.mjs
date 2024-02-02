@@ -2,8 +2,9 @@ import { viewListings } from "../api/listing/view.mjs";
 
 export function listingTemplateB(postData) {
   const listing = document.createElement("a");
-  listing.href = `/listing/?id=${listing.id}`;
   listing.classList.add("listings", "col", "card", "shadow-sm", "mb-5");
+  listing.href = `../listing/tryListing/?id=${postData.id}`;
+  
   listing.style.textDecoration = "none";
   listing.style.width = '50%';
 

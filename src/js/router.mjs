@@ -23,7 +23,7 @@ switch (path) {
     listeners.setUpdateListingFormListener()
     break;
   case '/listing/tryListing/':
-    listeners.renderSingleListingPage()
+    templates.renderSingleListingPage()
     break;
 }
 

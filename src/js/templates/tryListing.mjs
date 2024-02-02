@@ -16,7 +16,7 @@ export async function renderSingleListingPage() {
   const sellerContainer = document.querySelector("#sellerContainer");
 
   document.title = listing.title;
-  listingImage.src = listing.media[0] ?? `/images/placeholder.png`;
+  listingImage.src = listing.media[0];
   listingTitle.innerHTML = listing.title;
   listingDescription.innerHTML = listing.description;
 }

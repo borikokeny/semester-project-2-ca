@@ -24,7 +24,7 @@ async function testTemplateB() {
 }
 
 testTemplateA()
-testTemplateB()
+// testTemplateB()  kiutottem mert ez berendeli a 80-as sorszamu versenyzot
 
 
 
