@@ -25,6 +25,10 @@ switch (path) {
   case '/listing/tryListing/':
     templates.renderSingleListingPage()
     break;
+  case '/listings/':
+    listeners.search()
+    // listeners.renderSearch()
+    break;
 }
 
 // if (path === '/profile/login/') {

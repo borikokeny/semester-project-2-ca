@@ -41,10 +41,10 @@ export function listingTemplateB(postData) {
     endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
     listing.append(endsAt)
   
-    const bid = document.createElement('p');
-    bid.innerText = postData._count.bids;
-    bid.textContent = `Current BID: ${bid.innerText}`;
-    listing.append(bid)
+    // const bid = document.createElement('p');
+    // bid.innerText = postData._count.bids;
+    // bid.textContent = `Current BID: ${bid.innerText}`;
+    // listing.append(bid)
  
 
   const button = document.createElement('button');
