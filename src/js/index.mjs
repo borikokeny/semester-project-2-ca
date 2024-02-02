@@ -67,7 +67,7 @@ async function testTemplateA() {
 
 async function testTemplateB() {
   const listings = await listingMethods.viewListings();
-  const listing = listings[46];
+  const listing = listings[80];
   const container = document.querySelector("#listing");
   templates.renderListingTemplate(listing, container);
 

@@ -1,9 +1,13 @@
-export function listingTemplateA(postData) {
-  return `<div class="listing" id=${postData.id}>${postData.title}</div>`
-}
+// export function listingTemplateA(postData) {
+//   return `<div class="listing" id=${postData.id}>${postData.title}</div>`
+// }
 
-export function listingTemplateB(postData) {
 
+
+
+
+export async function listingTemplateB(postData) {
+ 
   const cardText = document.createElement('h5');
   const listingTitle = document.querySelector('.card-text');
   cardText.classList.add('listing');

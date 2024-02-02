@@ -1,12 +1,14 @@
 import { viewListings } from "../api/listing/view.mjs";
 
 export function listingTemplateA(postData) {
-  return `<div class="listing card" id=${postData.id}>${postData.title}</div>`
+  return `<div class="listings card" id=${postData.id}>${postData.title}</div>`
 }
 
 export function listingTemplateB(postData) {
-  const listing = document.createElement("div");
-  listing.classList.add("listing", "col", "card", "shadow-sm", "mb-5");
+  const listing = document.createElement("a");
+  listing.href = `/listing/?id=${listing.id}`;
+  listing.classList.add("listings", "col", "card", "shadow-sm", "mb-5");
+  listing.style.textDecoration = "none";
   listing.style.width = '50%';
 
 
