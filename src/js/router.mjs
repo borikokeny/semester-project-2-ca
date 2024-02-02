@@ -22,7 +22,7 @@ switch (path) {
   case '/listing/edit/':
     listeners.setUpdateListingFormListener()
     break;
-  case '/listing/tryListing/':
+  case '/listing/':
     templates.renderSingleListingPage()
     break;
   case '/listings/':
