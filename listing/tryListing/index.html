@@ -59,11 +59,12 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card shadow-sm" id="card">
-              <img id="listingImageContainer"/>
+              <img id="listingImg"/>
 
-              <div class="col">
-                <h1 id="listingTitle"></h1>
-                <h2 id="listingDescription"></h2>
+              <div class="col px-3">
+                <h1 id="listingTitle" class="mb-3"></h1>
+                <h6 id="listingDescription" class="mb-3"></h6>
+                <p id="listingEndsAt" class="mb-3"></p>
               </div>
               <div class="card-body">
                 <p class="card-text"></p>
@@ -71,7 +72,7 @@
 
                 <div class="d-flex justify-content-between align-items-center">
                   <form >
-                    <label>Add your BID</label>
+                    <label>Add your BID:</label>
                     <input placeholder="amount">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>

@@ -7,16 +7,18 @@ export async function renderSingleListingPage() {
 
   const listing = await viewListing(id);
 
-  const listingImage = document.querySelector("#listingImageContainer");
-  const listingTitle = document.querySelector("#listingTitle");
-  const listingDescription = document.querySelector("#listingDescription");
-  const listingEndsAt = document.querySelector("#listingEndsAt");
+  const img = document.querySelector("#listingImg");
+  const title = document.querySelector("#listingTitle");
+  const description = document.querySelector("#listingDescription");
+  const endsAt = document.querySelector("#listingEndsAt");
   const listingBids = document.querySelector("#listingBids");
   const biddingHistoryContainer = document.querySelector("#biddingHistoryContainer");
   const sellerContainer = document.querySelector("#sellerContainer");
 
   document.title = listing.title;
-  listingImage.src = listing.media[0];
-  listingTitle.innerHTML = listing.title;
-  listingDescription.innerHTML = listing.description;
+  img.src = listing.media[0];
+  title.innerHTML = listing.title;
+  description.innerHTML = listing.description;
+  endsAt.innerHTML = listing.endsAt;
+  endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
 }
