@@ -20,24 +20,41 @@ import * as listingMethods from "./api/listing/index.mjs";
 // }
 
 async function testTemplateA() {
+  const listings = await listingMethods.viewListings();
   const container = document.querySelector("#listings");
+  container.classList.add('album', 'py-5', 'bg-body-tertiary', 'container')
+  templates.renderListingTemplates(listings, container);
 
-  const renderListings = async (listings) => {
-    try {
-      templates.renderListingTemplates(listings, container);
-    } catch (error) {
-      return (error, container)
-    }
-  };
+  
 
-  try {
-    const listings = await listingMethods.viewListings();
-    renderListings(listings);
-  } catch (error) {
-    return (error)
-  }
   //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }
+
+
+
+
+// async function testTemplateA() {
+//   const container = document.querySelector("#listings");
+
+//   const renderListings = async (listings) => {
+//     try {
+//       templates.renderListingTemplates(listings, container);
+//     } catch (error) {
+//       return (error, container)
+//     }
+//   };
+
+//   try {
+//     const listings = await listingMethods.viewListings();
+//     renderListings(listings);
+//   } catch (error) {
+//     return (error)
+//   }
+//   //ez a kod jeleniti meg a listings/index.html-en a listingeket
+// }
+
+
+
 
 // async function testTemplate() {
 //   const listings = await listingMethods.viewListings();
