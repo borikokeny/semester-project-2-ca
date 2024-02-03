@@ -9,18 +9,7 @@ async function testTemplateA() {
   const container = document.querySelector("#listings");
   container.classList.add('album', 'py-5', 'bg-body-tertiary', 'container')
   templates.renderListingTemplates(listings, container);
-
-
   //ez a kod jeleniti meg a listings/index.html-en a listingeket
-}
-
-async function testTemplateB() {
-  const listings = await listingMethods.viewListings();
-  const listing = listings[80];
-  const container = document.querySelector("#listing");
-  templates.renderListingTemplate(listing, container);
-
-   //ez a kod rakja fel a kiszemelt sorszamu listinget az oldalra
 }
 
 testTemplateA()

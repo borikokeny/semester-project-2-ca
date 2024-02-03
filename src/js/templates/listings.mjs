@@ -1,5 +1,3 @@
-import { viewListings } from "../api/listing/view.mjs";
-
 export function listingTemplateB(postData) {
   const listing = document.createElement("a");
   listing.classList.add("listings", "col", "card", "shadow-sm", "mb-5");
@@ -58,5 +56,6 @@ export function listingTemplateB(postData) {
 
 export function renderListingTemplates(postDataList, parent) {
   parent.append(...postDataList.map(listingTemplateB))
+
   //ez a kod rakja ki a listings/index.html oldalra a listingeket
 }

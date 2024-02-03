@@ -11,7 +11,7 @@ export async function renderSingleListingPage() {
   const title = document.querySelector("#listingTitle");
   const description = document.querySelector("#listingDescription");
   const endsAt = document.querySelector("#listingEndsAt");
-  const listingBids = document.querySelector("#listingBids");
+  const bids = document.querySelector("#listingBids");
   const biddingHistoryContainer = document.querySelector("#biddingHistoryContainer");
   const sellerContainer = document.querySelector("#sellerContainer");
 
@@ -21,9 +21,11 @@ export async function renderSingleListingPage() {
   description.innerHTML = listing.description;
   endsAt.innerHTML = listing.endsAt;
   endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
+  bids.innerHTML = listing._count.bids;
+  bids.textContent = `Current BID: ${bids.innerText}`;
+
+  
 }
-
-
 
 
 
