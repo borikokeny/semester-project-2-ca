@@ -22,16 +22,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="../../index.html" class="nav-link px-2 link-secondary">HOME</a></li>
+              <li><a href="/" class="nav-link px-2 link-secondary">HOME</a></li>
               <li><a href="../../listings/" class="nav-link px-2 link-body-emphasis">Listings</a></li>
               <li><a href="../../profile/" class="nav-link px-2 link-body-emphasis">Create a Listing</a></li>
-              <!-- <li><a href="#" class="nav-link px-2 link-body-emphasis">Create an Account</a></li> -->
             </ul>
             </div>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
-    
             <div class="dropdown text-end">
               <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
@@ -49,73 +47,33 @@
       </div>
     </nav>
   </header>
-
-  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <!-- <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">BIDWHIZ logocska</h1> -->
-        <div class="col-lg-12 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-lg-3" src="../../images/Canon_eos.jpg" alt="Canon camera" width="720">
-      </div>
-        <!-- <p class="col-lg-10 fs-4">SOLUTION for AUCTION
-        </p> -->
-      </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" id="loginForm">
-          <h3>Sign In</h3>
-          <p>Sign in, so you can earn 1000 credits and add BIDS to any of the listings!</p>
-
-          <!-- <div class="form-floating mb-3">
-            <input type="name" class="form-control" id="floatingInput" placeholder="name" name="name" required pattern="^[\w]+$" title="Username can only contain upper and lower case letters, numbers and underscore. Example: myUser_123">
-            <label for="floatingInput">Name</label>
-          </div> -->
-
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed" >
-            <label for="floatingInput">Email address</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="password" required minlength="8">
-            <label for="floatingPassword">Password</label>
-          </div>
-
-          <!-- <div class="form-floating mb-3">
-            <input type="url" class="form-control" id="floatingAvatar" placeholder="Avatar" name="avatar">
-            <label for="floatingAvatar">Avatar</label>
-          </div> -->
-
-          <!-- <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div> -->
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-          <hr class="my-4">
-          <h4>Sign Up</h4>
-          <p>Welcome to BIDWHIZ auction site! It is quick and easy to set up an account.</p>
-          <a href="../register/index.html">Create an Account</a>
-          <!-- <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small> -->
-        </form>
-        
-      </div>
-
-
-  <!-- <form id="loginForm">
-    <div class="form-group mb-3">
-      <label for="">Email</label>
-      <input class="form-control" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed">
+  <div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 rounded-3 border shadow-lg">
+      <div class="col-lg-5 p-3 p-lg-5 pt-lg-2">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Sign in</h1>
+        <p class="lead">Sign in, so you can earn 1000 credits and add BIDS to any of the listings!</p>
+        <form class=" rounded-3 bg-body-tertiary" id="loginForm">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed" >
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="password" required minlength="8">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <hr class="my-4">
+        <h4>Sign Up</h4>
+        <p>Welcome to BIDWHIZ auction site! It is quick and easy to set up an account.</p>
+        <a href="../register/index.html">Create an Account</a>
+      </form>
     </div>
-
-    <div class="form-group mb-3">
-      <label for="">Password</label>
-      <input class="form-control" type="password" name="password" required minlength="8">
+      <div class="col-lg-6 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="/images/Canon_eos.jpg" alt="" width="720">
+      </div>
     </div>
-
-    <button class="btn btn-success">Login</button>
-  </form> -->
+  </div>
   <div class="container">
-
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <span class="mb-3 mb-md-0 text-body-secondary">© 2024 BIDWHIZ, Inc</span>
