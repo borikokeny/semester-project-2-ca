@@ -7,7 +7,7 @@ import * as listingMethods from "./api/listing/index.mjs";
 async function testTemplateA() {
   const listings = await listingMethods.viewListings();
   const container = document.querySelector("#listings");
-  container.classList.add('album', 'py-5', 'bg-body-tertiary', 'container');
+  // container.classList.add('py-5', 'bg-body-tertiary', 'container');
   templates.renderListingTemplates(listings, container);
   //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }

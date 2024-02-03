@@ -1,10 +1,10 @@
 export function listingTemplate(postData) {
+  
   const listing = document.createElement("a");
   listing.classList.add("listings", "col", "card", "shadow-sm", "mb-5");
   listing.href = `../listing/?id=${postData.id}`;
-  
   listing.style.textDecoration = "none";
-  listing.style.width = '50%';
+  // listing.style.width = '50%';
 
 
   if(postData.media) {
