@@ -14,8 +14,8 @@ export function listingTemplate(postData) {
     img.style.width = '100%';
     img.style.objectFit = 'cover';
     // listingImage.append(img);
-    img.src = postData.media;
-    img.alt = postData.title;
+    img.src = postData.media[0] ?? `/images/img-placeholder.png`;
+    img.alt = postData.title; 
 
     listing.append(img)
   }

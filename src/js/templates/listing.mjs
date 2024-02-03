@@ -19,7 +19,7 @@ export async function renderSingleListingPage() {
 
 
   document.title = listing.title;
-  img.src = listing.media[0];
+  img.src = listing.media[0] ?? `/images/img-placeholder.png`;
   title.innerHTML = listing.title;
   description.innerHTML = listing.description;
   endsAt.innerHTML = listing.endsAt;
