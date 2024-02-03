@@ -1,4 +1,4 @@
-function sellerInfo (seller) {
+function sellerInfo(seller) {
   const sellerCard = document.createElement("div");
 
   // const sellerAvatar = document.createElement("img");
@@ -6,12 +6,13 @@ function sellerInfo (seller) {
   // sellerAvatar.classList.add("img");
   // sellerCard.appendChild(sellerAvatar);
 
+
   const sellerName = document.createElement("h3");
-  sellerName.textContent = seller.name;
+  sellerName.innerHTML = seller.name;
   sellerCard.appendChild(sellerName);
 
   const sellerEmail = document.createElement("p");
-  sellerEmail.textContent = seller.email;
+  sellerEmail.innerHTML = seller.email;
   sellerCard.appendChild(sellerEmail);
 
   return sellerCard;

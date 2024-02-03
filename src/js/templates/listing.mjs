@@ -1,5 +1,6 @@
 import { viewListing } from "../api/listing/view.mjs";
 import { renderSellerInfo } from "../components/seller.mjs";
+import { renderBidderInfo } from "../components/bider.mjs";
 
 export async function renderSingleListingPage() {
   const queryString = window.location.search;
@@ -25,6 +26,8 @@ export async function renderSingleListingPage() {
   endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
   bids.innerHTML = listing._count.bids;
   bids.textContent = `Current BID: ${bids.innerText}`;
-  
+
+
+  renderBidderInfo(listing.bids, biddingHistoryContainer);
   renderSellerInfo(listing.seller, sellerInfo);
 }
