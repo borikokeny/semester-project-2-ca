@@ -12,9 +12,11 @@ switch (path) {
     listeners.setRegisterFormListener()
     break;  
   case '/':
+    listeners.search()
     listeners.setLogoutFormListener()
     break;  
   case '/profile/':
+    listeners.search()
     templates.renderProfile()
     listeners.setUpdateProfileListener()
     listeners.setCreateListingFormListener()
@@ -27,20 +29,5 @@ switch (path) {
     break;
   case '/listings/':
     listeners.search()
-    // listeners.renderSearch()
     break;
 }
-
-// if (path === '/profile/login/') {
-//   listeners.setLoginFormListener()
-// } else if (path === '/profile/register/') {
-//   listeners.setRegisterFormListener()
-// } else if (path === '/') {
-//   listeners.setLogoutFormListener()
-// } else if (path === '/listing/create/') {
-//   listeners.setCreateListingFormListener()
-// } else if (path === '/listing/edit/') {
-//   listeners.setUpdateListingFormListener()
-// } else if (path === '/listing/tryListing/') {
-//   templates.renderSingleListingPage()
-// }

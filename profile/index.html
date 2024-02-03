@@ -26,8 +26,8 @@
               <li><a href="../profile/" class="nav-link px-2 link-body-emphasis">Create a Listing</a></li>
             </ul>
             </div>
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <form id="searchForm" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input id="search" type="search" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
             <div class="dropdown text-end">
               <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,11 +122,10 @@
   <hr class="my-4">
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
-      
-          <div id="listings" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
-  
+      <div id="search-result" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
+      <div id="listings" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
     </div>
-  </div>
+  </div> 
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
