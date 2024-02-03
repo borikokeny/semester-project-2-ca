@@ -1,54 +1,39 @@
 export function listingTemplate(postData) {
   
   const listing = document.createElement("a");
-  listing.classList.add("listings", "col", "card", "shadow-sm", "mb-5");
+  listing.classList.add('listings', 'col', 'shadow-sm', 'mb-5');
   listing.href = `../listing/?id=${postData.id}`;
-  listing.style.textDecoration = "none";
-  // listing.style.width = '50%';
+  listing.style.textDecoration = 'none';
 
+  const listingCard = document.createElement('div');
+  listingCard.classList.add('card');
+  listing.append(listingCard)
 
-  if(postData.media) {
-    const img = document.createElement('img');
-    // const listingImage = document.querySelector('card-img-container');
-    img.classList.add('img', 'bd-placeholder-img', 'card-img-top', 'mb-4');
-    img.style.width = '100%';
-    img.style.objectFit = 'cover';
-    // listingImage.append(img);
-    img.src = postData.media[0] ?? `/images/img-placeholder.png`;
-    img.alt = postData.title; 
+  const img = document.createElement('img');
+  img.classList.add('img', 'bd-placeholder-img', 'card-img-top', 'mb-4');
+  img.style.width = '100%';
+  img.style.height = '15rem';
+  img.style.objectFit = 'cover';
+  img.src = postData.media[0] ?? `/images/img-placeholder.png`;
+  img.alt = postData.title; 
 
-    listing.append(img)
-  }
+  const listingBody = document.createElement('div');
+  listingBody.classList.add('card-body');
 
-  if(postData.title) {
-    const title = document.createElement('h5');
-    title.classList.add('card-text');
-    title.innerText = postData.title;
-    listing.append(title);
-  }
+  const title = document.createElement('h5');
+  title.classList.add('card-text');
+  title.innerText = postData.title;
   
-  
-  if(postData.description) {
-    const description = document.createElement('p');
-    description.innerText = postData.description;
-    listing.append(description)
-  }
-
-    const endsAt = document.createElement('p');
-    endsAt.innerText = postData.endsAt;
-    endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
-    listing.append(endsAt)
-  
-    const bid = document.createElement('p');
-    bid.innerText = postData._count.bids;
-    bid.textContent = `Current BID: ${bid.innerText}`;
-    listing.append(bid)
- 
+  const bid = document.createElement('p');
+  bid.innerText = postData._count.bids;
+  bid.textContent = `Current BID: ${bid.innerText}`;
 
   const button = document.createElement('button');
   button.classList.add('btn', 'btn-primary', 'mb-3');
-  button.innerText = "BID";
-  listing.append(button)
+  button.innerText = 'BID';
+
+  listingCard.append(img, listingBody);
+  listingBody.append(title, bid, button);
 
   return listing;
 }
