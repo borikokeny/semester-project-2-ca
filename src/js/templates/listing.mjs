@@ -1,41 +1,46 @@
-export function listingTemplateA(postData) {
-  return `<div class="listing card" id=${postData.id}>${postData.title}</div>`
-}
+import { viewListing } from "../api/listing/view.mjs";
 
-export function listingTemplateB(postData) {
-  const listing = document.createElement("div");
-  listing.classList.add("listing");
-  listing.innerText = postData.title;
-  
-  if(postData.description) {
-    const description = document.createElement('p');
-    description.innerText = postData.description;
-    listing.append(description)
-  }
+export async function renderSingleListingPage() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = urlParams.get("id");
 
-  if(postData.endsAt) {
-    const endsAt = document.createElement('p');
-    endsAt.innerText = postData.endsAt;
-    listing.append(endsAt)
-  }
+  const listing = await viewListing(id);
 
-  if(postData.media) {
-    const img = document.createElement('img');
-    img.src = postData.media;
-    img.alt = postData.title;
-    listing.append(img)
-  }
-  return listing;
-}
+  const img = document.querySelector("#listingImg");
+  const title = document.querySelector("#listingTitle");
+  const description = document.querySelector("#listingDescription");
+  const endsAt = document.querySelector("#listingEndsAt");
+  const bids = document.querySelector("#listingBids");
+  const bidsContainer = document.querySelector("#bidsContainer");
+  const sellerAvatar = document.querySelector("#sellerAvatar");
+  const sellerName = document.querySelector("#sellerInfo");
+  const sellerEmail = document.querySelector("#sellerEmail");
+  const biddersList = document.querySelector("#bidderName");
 
-export function renderListingTemplate(postData, parent) {
-  // parent.innerHTML = listingTemplate(postData)
+  document.title = listing.title;
+  img.src = listing.media[0] ?? `/images/img-placeholder.png`;
+  title.innerHTML = listing.title;
+  description.innerHTML = listing.description;
+  endsAt.innerHTML = listing.endsAt;
+  endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
+  bids.innerHTML = listing._count.bids;
+  bids.textContent = `Current BID: ${bids.innerText}`;
+  sellerAvatar.src = listing.avatar ?? `/images/img-placeholder.png`;
+  sellerName.innerHTML = listing.seller.name;
+  sellerEmail.innerHTML = listing.seller.email;
 
-  parent.append(listingTemplateB(postData))
-  //ez a kod teszi ki az egy listinget egy html oldalra
-}
+  const biddingList = listing.bids;
+  const bidderInfo = biddingList.map((bidder) => {
+  return `${bidder.bidderName} ${bidder.amount} ${bidder.created}`;
+  });
 
-export function renderListingTemplates(postDataList, parent) {
-  parent.append(...postDataList.map(listingTemplateB))
-  //ez a kod rakja ki a listing/index.html oldalra a listingeket
+  console.log(bidderInfo)
+
+  bidderInfo.forEach(bidderItems => {
+   
+    const bidderCard = document.createElement("div");
+    bidderCard.innerHTML = bidderItems;
+    biddersList.append(bidderCard);
+  });
 }

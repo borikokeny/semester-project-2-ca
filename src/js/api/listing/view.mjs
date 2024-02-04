@@ -15,9 +15,9 @@ export async function viewListing(id) {
   if (!id) {
     throw new Error("Get needs a post ID")
   }
-  const viewListingURL = `${API_AUCTION_URL}${action}/${id}`;
+  const viewListingURL = `${API_AUCTION_URL}${action}/${id}?_seller=true&_bids=true`;
   
-    const response = await authFetch(viewListingURL)
+    const response = await authFetch(viewListingURL);
   
-    return await response.json()
+    return await response.json();
   }
