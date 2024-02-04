@@ -26,6 +26,7 @@ switch (path) {
     break;
   case '/listing/':
     templates.renderSingleListingPage()
+    listeners.bidListing()
     break;
   case '/listings/':
     listeners.search()

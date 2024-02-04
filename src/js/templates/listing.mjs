@@ -1,6 +1,6 @@
 import { viewListing } from "../api/listing/view.mjs";
-import { renderSellerInfo } from "../components/seller.mjs";
-import { renderBidderInfo } from "../components/bider.mjs";
+// import { renderSellerInfo } from "../components/seller.mjs";
+// import { renderBidderInfo } from "../components/bidder.mjs";
 
 export async function renderSingleListingPage() {
   const queryString = window.location.search;
@@ -14,7 +14,7 @@ export async function renderSingleListingPage() {
   const description = document.querySelector("#listingDescription");
   const endsAt = document.querySelector("#listingEndsAt");
   const bids = document.querySelector("#listingBids");
-  const biddingHistoryContainer = document.querySelector("#biddingHistoryContainer");
+  const bidsContainer = document.querySelector("#biddingHistoryContainer");
   const sellerInfo = document.querySelector("#sellerInfo");
 
 
@@ -28,6 +28,6 @@ export async function renderSingleListingPage() {
   bids.textContent = `Current BID: ${bids.innerText}`;
 
 
-  renderBidderInfo(listing.bids, biddingHistoryContainer);
-  renderSellerInfo(listing.seller, sellerInfo);
+  // renderBidderInfo(listing.bids, biddingHistoryContainer);
+  // renderSellerInfo(listing.seller, sellerInfo);
 }
