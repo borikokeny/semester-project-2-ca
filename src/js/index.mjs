@@ -4,16 +4,11 @@ import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
 
 
-async function testTemplateA() {
+async function listingsTemplate() {
   const listings = await listingMethods.viewListings();
   const container = document.querySelector("#listings");
-  // container.classList.add('py-5', 'bg-body-tertiary', 'container');
   templates.renderListingTemplates(listings, container);
-  //ez a kod jeleniti meg a listings/index.html-en a listingeket
 }
 
-testTemplateA()
-// testTemplateB()  kiutottem mert ez berendeli a 80-as sorszamu versenyzot
-
-
+listingsTemplate()
 

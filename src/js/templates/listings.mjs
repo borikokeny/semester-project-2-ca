@@ -5,6 +5,7 @@ export function listingTemplate(postData) {
   listing.href = `../listing/?id=${postData.id}`;
   listing.style.textDecoration = 'none';
 
+
   const listingCard = document.createElement('div');
   listingCard.classList.add('card');
   listing.append(listingCard)
